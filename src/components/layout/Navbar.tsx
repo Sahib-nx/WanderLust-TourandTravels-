@@ -7,11 +7,11 @@ import { useScrolled } from '@/hooks/useScrolled'
 import { cn } from '@/lib/utils'
 
 const navLinks = [
-  { label: 'Destinations', href: '#destinations' },
-  { label: 'Experiences', href: '#experiences' },
-  { label: 'Plan a Trip', href: '#planner' },
+  { label: 'Destinations', href: '/destinationMap' },
+  { label: 'Experiences', href: '/experiences' },
+  { label: 'Plan a Trip', href: '/tripPlanner' },
   { label: 'About', href: '#about' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Contact', href: '/contact' },
 ]
 
 export function Navbar() {
@@ -43,7 +43,7 @@ export function Navbar() {
           >
             <CompassIcon className="w-8 h-8 text-gold-500 transition-transform duration-500 group-hover:rotate-45" />
             <span className="font-display font-semibold text-lg text-sand-100 tracking-tight">
-              Wanderlust
+              Cruxadventure
             </span>
           </Link>
 

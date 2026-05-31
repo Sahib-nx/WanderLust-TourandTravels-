@@ -122,7 +122,7 @@ export function HeroSection() {
       {/* ── Main content (parallax layer) ─────────────────────── */}
       <motion.div
         style={{ x: parallaxX, y: parallaxY }}
-        className="relative z-10 h-full flex flex-col justify-end pb-24 lg:pb-32 px-6 sm:px-10 lg:px-20 max-w-7xl mx-auto"
+        className="relative z-10 h-full flex flex-col justify-end pb-24 lg:pb-32 px-6 sm:px-10 lg:px-20 max-w-7xl mx-auto lg:mt-20"
       >
         {/* Eyebrow tag */}
         <motion.div
@@ -143,7 +143,7 @@ export function HeroSection() {
           variants={staggerContainer}
           initial="hidden"
           animate="visible"
-          className="font-display font-semibold text-display-2xl text-sand-100 leading-none mb-6 max-w-3xl"
+          className="font-display font-semibold text-display-2xl text-sand-100 leading-none max-w-3xl"
           aria-label={headline}
         >
           {words.map((word, i) => (
@@ -246,7 +246,7 @@ export function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -10 }}
           transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-          className="absolute bottom-10 left-6 lg:left-20 z-20 flex items-center gap-3"
+          className="absolute bottom-1 pt-5 left-6 lg:left-20 z-20 flex items-center gap-3"
         >
           <span className="font-body text-xs tracking-[0.2em] uppercase text-sand-100/50">
             Now showing

@@ -2,7 +2,10 @@ import type { Metadata, Viewport } from 'next'
 import { Plus_Jakarta_Sans } from 'next/font/google'
 import localFont from 'next/font/local'
 import './globals.css'
- 
+import { Navbar } from '@/components/layout/Navbar'
+import { Footer } from '@/types'
+import ScrollToTopProvider from '@/components/providers/ScrollToTopProvider'
+
 // ── Google Font: Plus Jakarta Sans ────────────────────────
 const jakarta = Plus_Jakarta_Sans({
   subsets: ['latin'],
@@ -11,24 +14,24 @@ const jakarta = Plus_Jakarta_Sans({
   variable: '--font-jakarta',
   display: 'swap',
 })
- 
+
 // ── Metadata ──────────────────────────────────────────────
 export const metadata: Metadata = {
   title: {
-    default: 'Wanderlust — Discover the World, Your Way',
+    default: 'Cruxadventure — Discover the World, Your Way',
     template: '%s | Wanderlust Travel',
   },
   description:
     'Curated luxury travel experiences across 150+ destinations. Expert-guided tours, bespoke itineraries, and unforgettable adventures.',
   keywords: ['travel', 'tours', 'luxury travel', 'destinations', 'adventure', 'vacation'],
   authors: [{ name: 'Wanderlust Travel' }],
-  creator: 'Wanderlust Travel',
+  creator: 'Cruxadventure',
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://wanderlust.travel',
-    siteName: 'Wanderlust Travel',
-    title: 'Wanderlust — Discover the World, Your Way',
+    url: 'https://Cruxadventure.travel',
+    siteName: 'Cruxadventure Travel',
+    title: 'Cruxadventure — Discover the World, Your Way',
     description: 'Curated luxury travel experiences across 150+ destinations.',
     images: [
       {
@@ -50,13 +53,13 @@ export const metadata: Metadata = {
     follow: true,
   },
 }
- 
+
 export const viewport: Viewport = {
   themeColor: '#0A1628',
   width: 'device-width',
   initialScale: 1,
 }
- 
+
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -67,7 +70,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
         <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap" rel="stylesheet" />
       </head>
-      <body>{children}</body>
+      <body>
+        <ScrollToTopProvider>
+          <Navbar />
+
+          {children}
+
+          <Footer />
+        </ScrollToTopProvider>
+      </body>
     </html>
   )
 }

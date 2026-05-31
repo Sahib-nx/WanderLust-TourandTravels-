@@ -98,7 +98,7 @@ export function Footer() {
             <Link href="/" className="mb-5 inline-flex items-center gap-2.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500 rounded" aria-label="Wanderlust home">
               <CompassIcon className="h-8 w-8 flex-shrink-0" />
               <span className="font-display text-xl font-semibold tracking-wide text-sand-100">
-                Wanderlust
+                Cruxadventure
               </span>
             </Link>
 
